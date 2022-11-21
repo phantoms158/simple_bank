@@ -1,0 +1,11 @@
+- install migrate golang CLI:
+https://github.com/golang-migrate/migrate
+
+- migrate -version v4.11.0
+
+- create migrate file init init_schema 
+migrate create -ext sql -dir db/migration -seq init_schema
+
+- docker exec -it postgres12 /bin/bash
+- createdb --username=root --owner=root simple_bank
+- dropdb simple_bank
