@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	db "github.com/phantoms158/simple_bank.git/db/sqlc"
+	db "github.com/phantoms158/simple_bank/db/sqlc"
 )
 
 type createAccountRequest struct {
@@ -53,6 +53,7 @@ func (server *Server) getAccount(ctx *gin.Context) {
 		ctx.JSON(http.StatusInternalServerError, errResponse(err))
 		return
 	}
+
 	ctx.JSON(http.StatusOK, account)
 }
 
