@@ -43,7 +43,7 @@ func ValidateFullName(value string) error {
 }
 
 func ValidatePassword(value string) error {
-	if err := ValidateString(value, 3, 200); err != nil {
+	if err := ValidateString(value, 6, 100); err != nil {
 		return err
 	}
 
